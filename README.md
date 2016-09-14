@@ -2,7 +2,7 @@
 
 Aplicação para controle orçamentário.
 
-A ideia é registrar, a cada mês, um conjunto de contas para o registro das despesas e receitas do mês
+A ideia é registrar, a cada mês, um conjunto de contas para o registro das despesas e receitas do mês.
 
 
 ## Como Funciona?
