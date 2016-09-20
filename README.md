@@ -22,8 +22,6 @@ de valor esperado e realizado, a fim de permitir um maior controle dos limites a
 Ex.:
 
 Conta Moradia
-==============
-
 | Descrição | Esperado | Realizado |
 |-----------|----------|-----------|
 | Aluguel   | 1500,00  | 1500,00   |
