@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component }  from '@angular/core';
+
+import { Conta }      from './conta';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  contas: Conta[] = [
+    new Conta('Moradia', 'Despesas com aluguel, condomínio, energia elétrica, etc'),
+    new Conta('Saúde', 'Despesas com plano, consultas, medicamentos, etc')
+  ];
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit }  from '@angular/core';
+import { Component, OnInit, Input }  from '@angular/core';
 
 import { Conta }              from '../conta'; 
 
@@ -8,11 +8,9 @@ import { Conta }              from '../conta';
   styleUrls: ['./conta-card.component.css']
 })
 export class ContaCardComponent implements OnInit {
-  conta: Conta;
+  @Input() conta: Conta;
 
-  constructor() { 
-    this.conta = new Conta('Moradia', 'Despesas com aluguel, condomínio, energia elétrica, etc');
-  }
+  constructor() {}
 
   ngOnInit() {
   }

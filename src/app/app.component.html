@@ -13,7 +13,7 @@
     </md-toolbar>
 
     <div class="app-content">
-        <app-conta-card></app-conta-card>
+        <app-conta-card *ngFor="let conta of contas" [conta]="conta"></app-conta-card>
     </div>
 </md-sidenav-layout>
 
