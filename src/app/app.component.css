@@ -8,6 +8,7 @@ md-sidenav-layout.m2app-dark {
 
 .app-content app-conta-card {
     margin: 20px;
+    float: left;
 }
 
 .app-sidenav {
