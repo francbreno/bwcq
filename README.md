@@ -1,31 +1,31 @@
-# Bwcq
+# bwcq - Bruce Wayne Calça Quadrada
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
+Aplicação para controle orçamentário.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+A ideia é registrar, a cada mês, um conjunto de contas para o registro das despesas e receitas do mês.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+## Como Funciona?
 
-## Build
+Devem ser criadas contas para cada tipo de custo a ser controlado.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Ex.:
 
-## Running unit tests
+* Conta Automóvel - Despesas com o carro (combustível, seguro, IPVA, manutenção, etc)
+* Conta Moradia - Aluguel, prestação, condomínio, água, luz, internet, telefone, etc
+* Conta Salário - Valores recebidos e descontos naquele mês
+* Conta Investimento - Valores investidos em Ações, CBDs, Tesouro Direto, etc
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Cada conta terá um tipo de custo associado, seja ele de despesa ou receita. Algumas podem ter registro
+de valor esperado e realizado, a fim de permitir um maior controle dos limites a serem gastos.
 
-## Running end-to-end tests
+Ex.:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
+Conta Moradia
 
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| Descrição | Esperado | Realizado |
+|-----------|----------|-----------|
+| Aluguel   | 1500,00  | 1500,00   |
+| Luz       | 100,00   |   91,00   |
+| TOTAL     | 1600,00  | 1591,00   |
+| SALDO     |          |    9,00   |
