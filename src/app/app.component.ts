@@ -8,8 +8,5 @@ import { Conta }      from './conta';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  contas: Conta[] = [
-    new Conta('Moradia', 'Despesas com aluguel, condomínio, energia elétrica, etc'),
-    new Conta('Saúde', 'Despesas com plano, consultas, medicamentos, etc')
-  ];
+  title: string = 'BWCQ';
 }

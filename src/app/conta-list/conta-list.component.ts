@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }  from '@angular/core';
+
+import { Conta }              from '../conta';
+import { ContaService }       from '../conta-service';
 
 @Component({
   selector: 'app-conta-list',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conta-list.component.css']
 })
 export class ContaListComponent implements OnInit {
+  contas: Conta[];
 
-  constructor() { }
+  constructor(private contaService: ContaService) { }
 
   ngOnInit() {
+    this.contaService.getContas().then(contas => this.contas = contas);
   }
-
 }

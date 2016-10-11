@@ -6,15 +6,13 @@
     <md-toolbar color="primary">
         <button class="app-icon-button" (click)="sidenav.toggle()">
             <i class="material-icons app-toolbar-menu">menu</i>
-        </button> BWCQ
+        </button> {{title}}
 
         <span class="app-toolbar-filler"></span>
-        <button md-button md-raised-button color="accent">Criar Conta</button>
+        <button md-button md-raised-button color="accent" (click)="goToNewConta()">Criar Conta</button>
     </md-toolbar>
-
-    <div class="app-content">
-        <app-conta-card *ngFor="let conta of contas" [conta]="conta"></app-conta-card>
-    </div>
+    
+    <router-outlet></router-outlet>
 </md-sidenav-layout>
 
 <span class="app-action" [class.m2app-dark]="isDarkTheme">
