@@ -1,9 +1,18 @@
-<div class="app-content">
-    <md-card>
-        <p>Conteúdo do card</p>
-        <button md-button>FLAT</button>
-        <button md-raised-button md-tooltip="This is a tooltip!">RAISED</button>
-        <button md-raised-button color="primary">PRIMARY RAISED</button>
-        <button md-raised-button color="accent">ACCENT RAISED</button>
-    </md-card>
-</div>
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+    <md-sidenav #sidenav mode="side" class="app-sidenav">
+        Sidenav
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+            <i class="material-icons app-toolbar-menu">menu</i>
+        </button> BWCQ
+
+        <span class="app-toolbar-filler"></span>
+        <button md-button md-raised-button color="accent">Criar Conta</button>
+    </md-toolbar>
+
+    <div class="app-content">
+        <app-conta-card></app-conta-card>
+    </div>
+</md-sidenav-layout>

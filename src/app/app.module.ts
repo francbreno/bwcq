@@ -5,10 +5,12 @@ import { HttpModule }     from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent }   from './app.component';
+import { ContaCardComponent } from './conta-card/conta-card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContaCardComponent
   ],
   imports: [
     BrowserModule,
