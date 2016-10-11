@@ -6,11 +6,13 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent }   from './app.component';
 import { ContaCardComponent } from './conta-card/conta-card.component';
+import { ContaListComponent } from './conta-list/conta-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContaCardComponent
+    ContaCardComponent,
+    ContaListComponent
   ],
   imports: [
     BrowserModule,
