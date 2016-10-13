@@ -15,4 +15,13 @@ export class ContaService {
   getConta(id: number): Promise<Conta> {
     return this.getContas().then(contas => contas.find(conta => conta.id === id));
   }
+
+  getContaMaiorSaldo(): Promise<Conta> {
+    var contasOrdenadas = this.getContas().then(contas => { 
+      contas.sort((contaA, contaB): number => contaA.saldo - contaB.saldo)
+      return contas;
+    });
+  
+    return Promise.resolve(contasOrdenadas[0]);
+  }
 }

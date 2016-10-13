@@ -1,10 +1,12 @@
-<md-card>
-    <md-card-subtitle>Conta</md-card-subtitle>
-    <md-card-title>{{conta.nome}}</md-card-title>
-    <md-card-content>
-        <p>{{conta.descricao}}</p>
-    </md-card-content>
-    <md-card-actions>
-        <button md-button (click)="goToDetalhes()">DETALHES</button>
-    </md-card-actions>
-</md-card>
+<div *ngIf="conta">
+    <md-card>
+        <md-card-subtitle>Conta</md-card-subtitle>
+        <md-card-title>{{conta?.nome}} - Saldo: R$ {{conta?.saldo}}</md-card-title>
+        <md-card-content>
+            <p>{{conta?.descricao}}</p>
+        </md-card-content>
+        <md-card-actions>
+            <button md-button (click)="goToDetalhes()">DETALHES</button>
+        </md-card-actions>
+    </md-card>
+</div>

@@ -1,4 +1,6 @@
-<p>
-  Dashboard - Exibindo informações gerais
-  <button md-button (click)="goToListaContas()">EXIBIR CONTAS</button>
-</p>
+<div class="app-content">
+  <p>Dashboard</p>
+  <app-conta-card [conta]="getContaMaiorSaldo()"></app-conta-card>
+
+  <button md-button (click)="goToListaContas()">LISTA DE CONTAS</button>
+</div>
