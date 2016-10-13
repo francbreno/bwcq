@@ -10,10 +10,14 @@ import { ContaService }       from '../conta-service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  contaMaiorSaldo: Conta;
 
   constructor(private router: Router, private contaService: ContaService) {}
 
   ngOnInit() {
+    this.contaService.getContaMaiorSaldo()
+      .then(conta => this.contaMaiorSaldo = conta)
+      .catch(error => {console.error(error)});
   }
 
   goToListaContas() {
