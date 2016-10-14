@@ -14,7 +14,7 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   goToNewConta() {
-    let link = ['/contas/new'];
+    let link = ['/new/conta'];
     this.router.navigate(link);
   }
 }
