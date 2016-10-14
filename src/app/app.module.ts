@@ -31,6 +31,6 @@ import { ContaFormComponent }     from './conta-form/conta-form.component';
     MaterialModule.forRoot(),
     AppRoutingModule],
   providers: [ContaService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -15,7 +15,8 @@
         "mobile": false,
         "styles": [
             "styles.css", 
-            "material-theme.css"
+            "material-theme.css",
+            "../node_modules/bootstrap/dist/css/bootstrap.min.css"
         ],
         "scripts": [],
         "environments": {

@@ -1,6 +1,5 @@
-<div class="app-content">
-  <p>Dashboard</p>
-  <app-conta-card [conta]="getContaMaiorSaldo()"></app-conta-card>
+<app-conta-card [conta]="contaMaiorSaldo"></app-conta-card>
 
-  <button md-button (click)="goToListaContas()">LISTA DE CONTAS</button>
-</div>
+<button md-button (click)="goToListaContas()">
+  <md-icon>list</md-icon> LISTA DE CONTAS
+</button>

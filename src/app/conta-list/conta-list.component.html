@@ -1,1 +1,5 @@
-<app-conta-card *ngFor="let conta of contas" [conta]="conta"></app-conta-card>
+<md-grid-list cols="3">
+    <md-list-item>
+        <app-conta-card *ngFor="let conta of contas" [conta]="conta"></app-conta-card>
+    </md-list-item>
+</md-grid-list>

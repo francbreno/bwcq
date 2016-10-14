@@ -1,22 +1,32 @@
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
-    <md-sidenav #sidenav mode="side" class="app-sidenav">
-        Sidenav
+<md-sidenav-layout fullscreen>
+    <md-sidenav #sidenav mode="over" class="app-sidenav">
+        <md-nav-list>
+            <h3 md-subheader>Conteúdo</h3>
+            <a md-list-item [routerLink]="['/contas']" (click)="sidenav.close()">
+                <md-icon md-list-avatar>list</md-icon>
+                <h4 md-line>Contas</h4>
+                <span md-line>Todas as contas cadastradas</span>
+            </a>
+            <a md-list-item [routerLink]="['/relatorios']" (click)="sidenav.close()">
+                <md-icon md-list-avatar>card_giftcard</md-icon>
+                <h4 md-line>Relatórios</h4>
+                <span md-line>Relatórios diversos para acompanhamento</span>
+            </a>       
+        </md-nav-list>
     </md-sidenav>
 
     <md-toolbar color="primary">
-        <button class="app-icon-button" (click)="sidenav.toggle()">
-            <i class="material-icons app-toolbar-menu">menu</i>
-        </button> {{title}}
+        <button md-icon-button (click)="sidenav.toggle()">
+            <i class="material-icons">menu</i>
+        </button> 
+        
+        {{title}}
 
-        <span class="app-toolbar-filler"></span>
-        <button md-button md-raised-button color="accent" (click)="goToNewConta()">Criar Conta</button>
     </md-toolbar>
 
-    <div class="app-content">
-        <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
 </md-sidenav-layout>
 
-<span class="app-action" [class.m2app-dark]="isDarkTheme">
-  <button md-fab><md-icon>add circle</md-icon></button>
-</span>
+<button md-fab (click)="goToNewConta()">
+    <md-icon>add</md-icon>
+</button>
