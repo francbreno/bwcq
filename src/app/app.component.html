@@ -1,7 +1,6 @@
-<md-sidenav-layout fullscreen>
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme" fullscreen>
     <md-sidenav #sidenav mode="over" class="app-sidenav">
         <md-nav-list>
-            <h3 md-subheader>Conteúdo</h3>
             <a md-list-item [routerLink]="['/dashboard']" (click)="sidenav.close()">
                 <md-icon md-list-avatar>dashboard</md-icon>
                 <h4 md-line>Dashboard</h4>
@@ -9,18 +8,26 @@
             <a md-list-item [routerLink]="['/contas']" (click)="sidenav.close()">
                 <md-icon md-list-avatar>list</md-icon>
                 <h4 md-line>Contas</h4>
-            </a>      
+            </a> 
+            <md-checkbox [checked]="isDarkTheme" (click)="isDarkTheme=!isDarkTheme" align="end">
+                Tema Dark
+            </md-checkbox>     
         </md-nav-list>
     </md-sidenav>
 
     <md-toolbar color="primary">
         <button md-icon-button (click)="sidenav.toggle()">
-            <i class="material-icons">menu</i>
+            <i class="material-icons app-toolbar-menu">menu</i>
         </button> 
         
-        {{title}}
+        <span style="margin-right: 10px;">{{title}}</span>
 
         <span class="toolbar-fill-remaining-space"></span>
+        
+        <md-input placeholder="search"></md-input>
+        <button md-icon-button>
+            <i class="material-icons">search</i>
+        </button>
         
         <button md-icon-button [md-menu-trigger-for]="menu">
             <i class="material-icons">more_vert</i>

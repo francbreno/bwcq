@@ -10,6 +10,7 @@ import { Conta }      from './conta';
 })
 export class AppComponent {
   title: string = 'BWCQ';
+  isDarkTheme: boolean = false;
 
   constructor(private router: Router) {}
 

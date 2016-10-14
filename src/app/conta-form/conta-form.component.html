@@ -5,10 +5,9 @@
       <md-input placeholder="Nome" required="true"></md-input>
       <md-input placeholder="Descrição"></md-input>
       <div>
-        Ativa desde sempre 
-        <md-button-toggle value="true">
-          <md-icon>check_box</md-icon>  
-        </md-button-toggle>
+        <md-checkbox [checked]="false" align="end">
+          Ativa desde sempre 
+        </md-checkbox>
       </div>
     </md-card-content>
     <md-card-actions>
