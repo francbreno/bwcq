@@ -24,4 +24,8 @@ export class DashboardComponent implements OnInit {
     let link = ['/contas'];
     this.router.navigate(link);
   }
+
+  getContaMaiorSaldo() {
+    return null;//this.contaService.getContaMaiorSaldo().then(conta => {return conta});
+  }
 }

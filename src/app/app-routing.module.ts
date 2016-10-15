@@ -11,7 +11,7 @@ import { ContaFormComponent }     from './conta-form/conta-form.component';
 const routes: Routes = [
   { path: 'contas', component: ContaListComponent },
   { path: 'contas/:id', component: ContaDetalhesComponent },
-  { path: 'contas/new', component: ContaFormComponent },
+  { path: 'new/conta', component: ContaFormComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];

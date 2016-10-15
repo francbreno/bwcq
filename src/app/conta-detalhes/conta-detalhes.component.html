@@ -1,34 +1,35 @@
-<md-card *ngIf="conta">
+<md-card>
     <md-card-subtitle>Conta</md-card-subtitle>
-    <md-card-title>{{conta.id}} - {{conta.nome}}</md-card-title>
+    <md-card-title>{{conta?.nome}}</md-card-title>
     <md-card-content>
-        <p>{{conta.descricao}}</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Descrição</th>
-                    <th>Esperado</th>
-                    <th>Realizado</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <td>TOTAL:</td>
-                    <td>1500,00</td>
-                    <td style="color: red;">1500,00</td>
-                </tr>
-                <tr style="border-top: 1px solid black;">
-                    <td>SALDO:</td>
-                    <td colspan="2" style="align:right;">0,00</td>
-                </tr>
-            </tfoot>
-            <tbody>
-                <tr>
-                    <td>Aluguel</td>
-                    <td>1500,00</td>
-                    <td style="color: red;">1500,00</td>
-                </tr>
-            </tbody>
-        </table>
+        <p>Saldo: R$ {{conta?.saldo}}</p>
+        <p>{{conta?.descricao}}</p>
+
+        <md-list>
+            <md-list-item>
+                <md-icon md-list-avatar>home</md-icon>
+                <h3 md-line> Alugel </h3>
+                <p md-line>Esperado: 1480,00</p>
+                <p md-line>Realizado: 1480,00</p>
+            </md-list-item>
+            <md-list-item>
+                <md-icon md-list-avatar>location_city</md-icon>
+                <h3 md-line> Condomínio </h3>
+                <p md-line>Esperado: 425,00</p>
+                <p md-line>Realizado: 425,00</p>
+            </md-list-item>
+            <md-list-item>
+                <md-icon md-list-avatar>power</md-icon>
+                <h3 md-line> Energia elétrica </h3>
+                <p md-line>Esperado: 100,00</p>
+                <p md-line>Realizado: 106,00</p>
+            </md-list-item>
+            <md-list-item>
+                <md-icon md-list-avatar>wifi</md-icon>
+                <h3 md-line> Telefone e Internet </h3>
+                <p md-line>Esperado: 1480,00</p>
+                <p md-line>Realizado: 1480,00</p>
+            </md-list-item>
+        </md-list>
     </md-card-content>
 </md-card>
